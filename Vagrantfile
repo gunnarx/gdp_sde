@@ -67,6 +67,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       true                  # Make sure Vagrant does not stop on error
       "
 
+   # Export the VM name to make it known (build artifact)
+   ENV['VMNAME'] = vmname
+
    # Run final installation script, if it exists
    config.vm.provision :shell, inline:
    " [ -f /vagrant/script.sh ] && /vagrant/script.sh "
