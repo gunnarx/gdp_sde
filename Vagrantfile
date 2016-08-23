@@ -54,8 +54,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
    config.vm.provision :shell, inline:
       "
-      echo Running: rsync -a --delete #{source_dir}/ /home/vagrant/
-      rsync -a --delete #{source_dir}/ /home/vagrant/
+      echo Running: rsync -av --delete #{source_dir}/ /home/vagrant/
+      rsync -av --delete #{source_dir}/ /home/vagrant/
       "
 
    # Created/copied files, are owned by root after provisioning - fix that
