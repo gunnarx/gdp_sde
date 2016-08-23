@@ -73,6 +73,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
    # Run final installation script, if it exists
    config.vm.provision :shell, inline:
    " [ -f /vagrant/script.sh ] && /vagrant/script.sh 
-     echo #{vmname} >VMNAME
+     echo #{vmname} >/vagrant/VMNAME
    "
 end
