@@ -1,3 +1,12 @@
+SDE-Work (Software Development Environment)
+
+This repo is an extension/specific use of basic-vagrant.  It includes
+various files that are necessary to install on a SDE virtual machine, and
+the script has been modified to install specific things.
+
+
+Old basic-vagrant description:
+
 Simple Vagrant file that mostly copies all the content of a given source
 directory into the home directory in the virtual machine. In other words,
 the preparation of that content should be done before the VM creation.
