@@ -26,7 +26,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
    box_url = "http://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box" if box_url == nil
 
    source_dir = ENV['SOURCE_DIR']
-   source_dir = 'install/' if source_dir == nil
+   source_dir = 'homedir/' if source_dir == nil
    source_dir = "/vagrant/#{source_dir}"
 
    config.vm.box = box
