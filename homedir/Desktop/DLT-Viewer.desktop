@@ -1,9 +1,8 @@
 [Desktop Entry]
 Encoding=UTF-8
 Type=Application
-Name=d-feet D-Bus Tool
-Name[en_US]=d-feet D-Bus Tool
+Name=DLT-Viewer
 #Icon=TBD
 # FIXME - path?
-Exec=/usr/local/bin/d-feet
+Exec=/home/vagrant/dlt-viewer/dlt_viewer
 
