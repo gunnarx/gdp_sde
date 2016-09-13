@@ -2,7 +2,6 @@
 Encoding=UTF-8
 Type=Application
 Name=Qt Creator
-Name[en_US]=Qt Creator
 #Icon=TBD
-Exec=/home/vagrant/Qt/Tools/bin/qtcreator
+Exec=/home/vagrant/Qt-5.6/Tools/QtCreator/bin/qtcreator
 
