@@ -12,6 +12,7 @@ apt-get install -y d-feet
 # Prerequisites according to https://wiki.qt.io/Install_Qt_5_on_Ubuntu
 apt-get install -y mesa-common-dev libegl1-mesa libglu1-mesa-dev
 apt-get install -y build-essential
+apt-get install -y cmake
 apt-get install -y libfontconfig1
 
 # There's some bug currently with x flags disappearing from the filesystem
