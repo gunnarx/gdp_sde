@@ -8,7 +8,11 @@ apt-get install -y lxde
 apt-get install -y openjdk-7-jre
 apt-get install -y git wget unzip
 apt-get install -y d-feet
-apt-get install libegl1-mesa
+
+# Prerequisites according to https://wiki.qt.io/Install_Qt_5_on_Ubuntu
+apt-get install -y mesa-common-dev libegl1-mesa libglu1-mesa-dev
+apt-get install -y build-essential
+apt-get install -y libfontconfig1
 
 # There's some bug currently with x flags disappearing from the filesystem
 # somewhere along the build pipeline.
