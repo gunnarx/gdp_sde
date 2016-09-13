@@ -3,6 +3,6 @@ Encoding=UTF-8
 Type=Application
 Name=Eclipse with Franca
 Name[en_US]=Eclipse with Franca
-Icon=/home/vagrant/gdp_sdk/eclipse/icon.xpm
-Exec=/home/vagrant/gdp_sdk/eclipse/eclipse -data /home/vagrant/gdp_sdk/workspace
+Icon=/home/vagrant/gdp-sdk/eclipse/icon.xpm
+Exec=/home/vagrant/gdp-sdk/eclipse/eclipse -data /home/vagrant/gdp-sdk/workspace
 
