@@ -2,6 +2,6 @@
 Encoding=UTF-8
 Type=Application
 Name=DLT-Viewer
-#Icon=TBD
+Icon=TBD
 Exec=/home/vagrant/dlt-viewer/dlt-viewer_wrapper.sh
 
