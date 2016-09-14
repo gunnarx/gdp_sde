@@ -31,5 +31,13 @@ cat <<EOT >qt.conf
 Prefix = $QT_LOCATION
 EOT
 
+cat <<EOT >dlt-viewer_wrapper.sh
+#!/bin/sh
+export LD_LIBRARY_PATH=$QT_LOCATION/lib
+/home/vagrant/dlt-viewer/dlt_viewer
+EOT
+
+chmod 755 dlt-viewer_wrapper.sh
+
 echo "Done"
 echo "Remember to run the program with $LD_LIBRARY_PATH = $QT_LOCATION/lib in environment."

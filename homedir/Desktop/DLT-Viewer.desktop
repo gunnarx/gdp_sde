@@ -3,6 +3,5 @@ Encoding=UTF-8
 Type=Application
 Name=DLT-Viewer
 #Icon=TBD
-# FIXME - path?
-Exec=/home/vagrant/dlt-viewer/dlt_viewer
+Exec=/home/vagrant/dlt-viewer/dlt-viewer_wrapper.sh
 
