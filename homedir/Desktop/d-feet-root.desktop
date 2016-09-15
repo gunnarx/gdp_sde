@@ -1,0 +1,27 @@
+[Desktop Entry]
+Name=D-Feet
+Name[cs]=D-Feet
+Name[es]=D-Feet
+Name[pt_BR]=D-Feet
+Name[sl]=D-Feet
+GenericName=D-Bus Debugger
+GenericName[cs]=Program pro ladění D-Bus
+GenericName[es]=Depurador de D-Bus
+GenericName[pt_BR]=Depurador de D-Bus
+GenericName[sl]=Razhroščevalnik vodila D-Bus
+Comment=Debug D-Bus applications
+Comment[cs]=Ladit aplikace používající sběrnici D-Bus
+Comment[es]=Depurar aplicaciones de D-Bus
+Comment[pt_BR]=Depure aplicativos D-Bus
+Comment[sl]=Razhroščevanje programov vodila D-Bus
+Keywords=debug;d-bus;
+Keywords[cs]=ladit;ladění;d-bus;
+Keywords[es]=depurar;depurador;d-bus;
+Keywords[pt_BR]=depuração;debug;d-bus;barramento
+Keywords[sl]=razhroščevanje;vodilo; d-bus;dbus;
+Exec=gksu -u root d-feet
+Icon=d-feet
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Development;Debugger;
+StartupNotify=true
