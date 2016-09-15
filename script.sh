@@ -15,6 +15,15 @@ apt-get install -y build-essential
 apt-get install -y cmake
 apt-get install -y libfontconfig1
 
+# Yocto minimal prerequisites (some repetition here but that's OK)
+apt-get install -y gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat libsdl1.2-dev xterm
+apt-get install -y gettext
+
+# And some other commonly used packages in other GENIVI software
+# Let's be lazy and reuse the file we already have for Go Agent setup (again, I would say some repetition here)
+wget https://raw.githubusercontent.com/gunnarx/gocd-setup/master/install_common_build_dependencies.sh
+. ./install_common_build_dependencies.sh
+
 # There's some bug currently with x flags disappearing from the filesystem
 # somewhere along the build pipeline.
 # Quick fix...
