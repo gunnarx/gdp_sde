@@ -25,9 +25,10 @@ wget https://raw.githubusercontent.com/gunnarx/gocd-setup/master/install_common_
 . ./install_common_build_dependencies.sh
 
 # There's some bug currently with x flags disappearing from the filesystem
-# somewhere along the build pipeline.
+# somewhere along the build pipeline (files unpacked on a noexec filesystem?)
 # Quick fix...
-chmod 755 $HOMEDIR/Qt-5.6/Tools/QtCreator/bin/qtcreator
-chmod 755 $HOMEDIR/gdp-sdk/eclipse/eclipse
+chmod 755 $HOMEDIR/gdp-sdk $HOMEDIR/gdp-sdk/eclipse $HOMEDIR/gdp-sdk/eclipse/eclipse
 chmod 755 $HOMEDIR/dlt-viewer/dlt_viewer
+chmod -R 755 $HOMEDIR/Qt-5.6/5.6/gcc_64/bin $HOMEDIR/Qt-5.6/Tools/QtCreator/bin
+chmod -R 755 $HOMEDIR/gdp-sdk/bin
 
