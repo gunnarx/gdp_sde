@@ -21,7 +21,7 @@ else
    INSTALL_LOCATION="$QT_LOCATION"
 fi
 
-echo "Installing libs and plugins into $QT_LOCATION"
+echo "Installing libs and plugins into $INSTALL_LOCATION"
 cp lib* $INSTALL_LOCATION/lib/
 cp plugins/* $INSTALL_LOCATION/plugins/
 
