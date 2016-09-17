@@ -1,9 +1,5 @@
 [Desktop Entry]
-Name=D-Feet
-Name[cs]=D-Feet
-Name[es]=D-Feet
-Name[pt_BR]=D-Feet
-Name[sl]=D-Feet
+Name=D-Feet (root)
 GenericName=D-Bus Debugger
 GenericName[cs]=Program pro ladění D-Bus
 GenericName[es]=Depurador de D-Bus
