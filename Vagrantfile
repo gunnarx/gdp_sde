@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
    # Set defaults, or as defined by environment variables
 
-   hostname = ENV['HOSTNAME']
+   hostname = ENV['VMNAME']
    hostname = 'ubuntu-system' if hostname == nil
 
    box = ENV['BOX']
