@@ -1,6 +1,8 @@
 #!/bin/bash
 
-HOMEDIR=/home/vagrant
+USER=vagrant
+HOMEDIR=/home/$USER
+LXDE_CONF=/etc/lxdm/default.conf
 
 apt-get update
 
@@ -8,6 +10,12 @@ apt-get install -y lxde
 apt-get install -y openjdk-7-jre
 apt-get install -y git wget unzip
 apt-get install -y d-feet
+
+
+# For whatever reason, LXDM by default seems to list users like "syslog" in the
+# login screen.  Get rid of all that...
+echo "white=$USER" >>$LXDE_CONF
+echo "black=syslog usbmux messagebus pollinate colord statd puppet" >> $LXDE_CONF
 
 # Prerequisites according to https://wiki.qt.io/Install_Qt_5_on_Ubuntu
 apt-get install -y mesa-common-dev libegl1-mesa libglu1-mesa-dev
