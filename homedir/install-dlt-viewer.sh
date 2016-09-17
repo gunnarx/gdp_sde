@@ -34,7 +34,9 @@ EOT
 cat <<EOT >dlt-viewer_wrapper.sh
 #!/bin/sh
 export LD_LIBRARY_PATH=$QT_LOCATION/lib
-/home/vagrant/dlt-viewer/dlt_viewer
+# Sometimes dlt-viewer starts up without the title bar visible, causing it to
+# be unmoveable.  Let's set a location that prevents that if it happens.
+/home/vagrant/dlt-viewer/dlt_viewer -geometry 1400x800+20+20
 EOT
 
 chmod 755 dlt-viewer_wrapper.sh
