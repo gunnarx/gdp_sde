@@ -19,6 +19,11 @@ apt-get install -y libfontconfig1
 apt-get install -y gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat libsdl1.2-dev xterm
 apt-get install -y gettext
 
+# These seem to always cause trouble when doing vagrant based provisioning
+# and complaints will remain on later user apt-get installs.  I don't think
+# we need them.
+apt-get remove -y dictionaries-common miscfiles
+
 # And some other commonly used packages in other GENIVI software
 # Let's be lazy and reuse the file we already have for Go Agent setup (again, I would say some repetition here)
 wget https://raw.githubusercontent.com/gunnarx/gocd-setup/master/install_common_build_dependencies.sh
