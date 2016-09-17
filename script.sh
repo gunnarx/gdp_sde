@@ -37,3 +37,10 @@ chmod 755 $HOMEDIR/dlt-viewer/dlt_viewer
 chmod -R 755 $HOMEDIR/Qt-5.6/5.6/gcc_64/bin $HOMEDIR/Qt-5.6/Tools/QtCreator/bin
 chmod -R 755 $HOMEDIR/gdp-sdk/bin
 
+# Some unnecessary packages...
+apt-get remove -y juju --auto-remove
+
+# Clear apt caches
+apt-get clean
+rm -rf /tmp/* /var/{cache,tmp}/* /var/lib/apt/lists/*
+
