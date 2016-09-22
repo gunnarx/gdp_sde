@@ -11,7 +11,6 @@ apt-get install -y openjdk-7-jre
 apt-get install -y git wget unzip
 apt-get install -y d-feet
 
-
 # For whatever reason, LXDM by default seems to list users like "syslog" in the
 # login screen.  Get rid of all that...
 echo "white=$USER" >>$LXDE_CONF
@@ -48,6 +47,7 @@ chmod -R 755 $HOMEDIR/gdp-sdk/bin
 # Unpack SDK
 chmod 755 ./gdp-sdk/oecore*toolchain*.sh
 ./gdp-sdk/oecore*toolchain*.sh -d ./gdp-sdk/yocto-sdk/* -y
+rm ./gdp-sdk/oecore*toolchain*.sh
 
 # Some unnecessary packages...
 apt-get remove -y juju --auto-remove
