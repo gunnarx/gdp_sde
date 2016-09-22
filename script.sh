@@ -45,6 +45,10 @@ chmod 755 $HOMEDIR/dlt-viewer/dlt_viewer
 chmod -R 755 $HOMEDIR/Qt-5.6/5.6/gcc_64/bin $HOMEDIR/Qt-5.6/Tools/QtCreator/bin
 chmod -R 755 $HOMEDIR/gdp-sdk/bin
 
+# Unpack SDK
+chmod 755 ./gdp-sdk/oecore*toolchain*.sh
+./gdp-sdk/oecore*toolchain*.sh -d ./gdp-sdk/yocto-sdk/* -y
+
 # Some unnecessary packages...
 apt-get remove -y juju --auto-remove
 
