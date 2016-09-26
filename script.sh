@@ -6,7 +6,7 @@ LXDE_CONF=/etc/lxdm/default.conf
 
 apt-get update
 
-apt-get install -y lxde
+apt-get install -y --no-install-recommends lxde
 apt-get install -y openjdk-7-jre
 apt-get install -y git wget unzip
 apt-get install -y d-feet
@@ -38,7 +38,8 @@ wget https://raw.githubusercontent.com/gunnarx/gocd-setup/master/install_common_
 
 # There's some bug currently with x flags disappearing from the filesystem
 # somewhere along the build pipeline (files unpacked on a noexec filesystem?)
-# Quick fix...
+# Hmm, the bug should be gone now for yocto-sdk, but I'm not sure about Qt install, etc
+# Better safe than sorry for now...
 chmod 755 $HOMEDIR/gdp-sdk $HOMEDIR/gdp-sdk/eclipse $HOMEDIR/gdp-sdk/eclipse/eclipse
 chmod 755 $HOMEDIR/dlt-viewer/dlt_viewer
 chmod -R 755 $HOMEDIR/Qt-5.6/5.6/gcc_64/bin $HOMEDIR/Qt-5.6/Tools/QtCreator/bin
