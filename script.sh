@@ -49,6 +49,11 @@ chmod 755 ./gdp-sdk/oecore*toolchain*.sh
 ./gdp-sdk/oecore*toolchain*.sh -d ./gdp-sdk/yocto-sdk/* -y
 rm ./gdp-sdk/oecore*toolchain*.sh
 
+# Prompt
+cd ~/
+git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
+cd -
+
 # Some unnecessary packages...
 apt-get remove -y juju --auto-remove
 
