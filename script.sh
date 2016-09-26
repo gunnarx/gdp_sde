@@ -57,8 +57,10 @@ cd -
 
 # Some unnecessary packages...
 apt-get remove -y juju --auto-remove
+apt-get autoremove
 
 # Clear apt caches
+apt-get autoclean
 apt-get clean
 rm -rf /tmp/* /var/{cache,tmp}/* /var/lib/apt/lists/*
 
