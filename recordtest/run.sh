@@ -60,7 +60,7 @@ set -e  # Fail if failure...
 [ -n "$id" ]
 
 if [ "$OLD_VIRTUALBOX" = 1 ] ; then
-   VBoxManage modifyvm $id --vcpenable on
+   VBoxManage modifyvm $id --vcpenabled on
    VBoxManage modifyvm $id --vcpwidth $W
    VBoxManage modifyvm $id --vcpheight $H
    VBoxManage modifyvm $id --vcprate 512
