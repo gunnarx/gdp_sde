@@ -10,6 +10,7 @@ apt-get install -y lxde
 apt-get install -y openjdk-7-jre
 apt-get install -y git wget unzip
 apt-get install -y d-feet
+apt-get install -y wmctrl # used by selftest
 
 # For whatever reason, LXDM by default seems to list users like "syslog" in the
 # login screen.  Get rid of all that...
@@ -63,4 +64,19 @@ apt-get autoremove
 apt-get autoclean
 apt-get clean
 rm -rf /tmp/* /var/{cache,tmp}/* /var/lib/apt/lists/*
+
+exit
+
+#---- ICS stuff to consider ----
+
+#get the VM up-to-date
+DEBIAN_FRONTEND=noninteractive apt-get dist-upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" 
+apt-get update -y
+
+#make the student account
+useradd ics -s /bin/bash -G sudo -m
+echo 'ics:ics' | chpasswd
+
+#get Qt!
+apt-get install -y qtcreator qtbase5-examples qtbase5-doc-html
 
