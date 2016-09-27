@@ -1,0 +1,8 @@
+# If /selftest is not mounted this will simply fail.  Not a problem.
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=SelfTest
+Icon=TBD
+Exec=/home/vagrant/.config/autostart/mount_and_start.sh
+

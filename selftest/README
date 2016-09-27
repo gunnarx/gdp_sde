@@ -1,0 +1,29 @@
+How does the self test work?
+
+1. Externally from the host, the VM is configured to have a shared folder
+named /selftest which has the selftest scripts.  For automated tests,
+adding this shared folder can be scripted. (optional - see 3a)
+
+2. ~/.config/autostart is the Freedesktop standard for automatically
+started applications (described by .desktop files) In this directory a
+.desktop file was added which runs the first script which is also located
+inside ~/.config/autostart
+
+3. That script mount_and_start.sh will execute $ sudo mount /selftest...
+3 a) If the mount fails because the VM was not configured to have the shared
+     folder then this simply fails.  (Equivalent with: The VM is not configured
+     to run self-test)
+NOTE: The user, vagrant, is typically set up for passwordless sudo which is
+why the mounting works.
+
+4. The mount_and_start script executes the entrypoint run.sh from /selftest
+
+5. run.sh is currently set up to start all applications with some delay
+between each, and eventually killing them again. That is done by executing
+pcmanfm on each app that we have as a .desktop file.  This is equivalent
+with launching each desktop icon.
+
+For the first setup here, there is no programatic check that applications
+run OK - the test is assumed to be looked at by a human through a
+screencast movie.
+
