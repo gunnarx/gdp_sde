@@ -20,7 +20,9 @@ PATTERN="gdp-sdk"
 SELFTESTDIR=../selftest
 
 # Geometry of the video
-RESOLUTION=1920x1080
+W=1920
+H=1080
+RESOLUTION=${W}x${H}
 
 # N.B... more settings hardcoded below. :-/
 # --------------------------------------------------------------------
@@ -57,12 +59,20 @@ id=$(VBoxManage list vms | grep "$PATTERN" | awk '{print $2}' | sed 's/[{}]//g' 
 set -e  # Fail if failure...
 [ -n "$id" ]
 
-VBoxManage modifyvm $id --videocap on
-VBoxManage modifyvm $id --videocapres $RESOLUTION
-VBoxManage modifyvm $id --videocaprate 512
-VBoxManage modifyvm $id --videocapfps 25
-VBoxManage modifyvm $id --videocapmaxtime $rectime
-VBoxManage modifyvm $id --videocapmaxsize $MAX_VIDEO_SIZE
+if [ "$OLD_VIRTUALBOX" = 1 ] ; then
+   VBoxManage modifyvm $id --vcpenable on
+   VBoxManage modifyvm $id --vcpwidth $W
+   VBoxManage modifyvm $id --vcpheight $H
+   VBoxManage modifyvm $id --vcprate 512
+   VBoxManage modifyvm $id --vcpfps 25
+else
+   VBoxManage modifyvm $id --videocap on
+   VBoxManage modifyvm $id --videocapres $RESOLUTION
+   VBoxManage modifyvm $id --videocaprate 512
+   VBoxManage modifyvm $id --videocapfps 25
+   VBoxManage modifyvm $id --videocapmaxtime $rectime
+   VBoxManage modifyvm $id --videocapmaxsize $MAX_VIDEO_SIZE
+fi
 
 # Defaults are OK for these
 #VBoxManage modifyvm $id --videocapfile <filename>]
