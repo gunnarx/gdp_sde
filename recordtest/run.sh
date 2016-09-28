@@ -56,8 +56,8 @@ fi
 
 id=$(VBoxManage list vms | grep "$PATTERN" | awk '{print $2}' | sed 's/[{}]//g' )
 
-set -e  # Fail if failure...
-[ -n "$id" ]
+#set -e  # Fail if failure...
+#[ -n "$id" ]
 
 if [ "$OLD_VIRTUALBOX" = 1 ] ; then
    VBoxManage modifyvm $id --vcpenabled on
