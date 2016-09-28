@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -x
 # (C) 2016 Gunnar Andersson
 # License: MPLv2
 
