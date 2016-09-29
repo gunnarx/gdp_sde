@@ -68,6 +68,7 @@ if [ -n "$RECORD" ] ; then
       VBoxManage modifyvm $id --vcpheight $H
       VBoxManage modifyvm $id --vcprate 512
       VBoxManage modifyvm $id --vcpfps 25
+      VBoxManage modifyvm $id --vcpfile "$(dirname $vmfile)/selftest.webm"
    else
       VBoxManage modifyvm $id --videocap on
       VBoxManage modifyvm $id --videocapres $RESOLUTION
@@ -75,6 +76,7 @@ if [ -n "$RECORD" ] ; then
       VBoxManage modifyvm $id --videocapfps 25
       VBoxManage modifyvm $id --videocapmaxtime $(($RECTIME*1000))
       VBoxManage modifyvm $id --videocapmaxsize $MAX_VIDEO_SIZE
+      VBoxManage modifyvm $id --videocapfile "$(dirname $vmfile)/selftest.webm"
    fi
 else
    if [ "$OLD_VIRTUALBOX" = 1 ] ; then
@@ -85,7 +87,6 @@ else
 fi
 
 # Defaults are OK for these
-#VBoxManage modifyvm $id --videocapfile <filename>]
 #VBoxManage modifyvm $id --videocapopts <key=value> [<key=value> ...]]
 #VBoxManage modifyvm $id --defaultfrontend default
 #VBoxManage modifyvm $id --videocapscreens all
