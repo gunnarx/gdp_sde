@@ -13,6 +13,6 @@ echo "Unregistering old VMs matching pattern: $PATTERN :"
 VBoxManage list vms | fgrep "$PATTERN"
 for id in $(VBoxManage list vms | fgrep "$PATTERN" | awk '{print $2}' | sed 's/[{}]//g') ; do
     VBoxManage controlvm $id poweroff
-    VBoxManage unregistervm $id 
+    VBoxManage unregistervm --delete $id 
 done
 
