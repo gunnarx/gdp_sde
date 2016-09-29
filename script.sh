@@ -56,6 +56,9 @@ cd ~/
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
 cd -
 
+# Skip login screen
+echo -e "[base]\nautologin=$USER" >> /etc/lxdm/default.conf
+
 # Some unnecessary packages...
 apt-get remove -y juju --auto-remove
 apt-get autoremove
