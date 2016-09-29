@@ -19,19 +19,17 @@ Purpose and content of this repo:
 ** various .dotfiles and other such configuration
 ** smaller helper scripts and binaries that were not part of earlier pipeline stages
 ** other needed data, such as desktop wallpaper
-* Finally, a single shell script to execute apt-get install of the 
+* Finally, a single shell script to execute apt-get install of remaining
+needed packages, and other final configuration.
 
 Mechanics of operation:
 -----------------------
 
-* In addition to the above, the repo has a simple [Vagrantfile](http://vagrantup.com)
-that imports a base distro and simply copies the content of homedir/ into the main home directory of the virtual machine.  
+* In addition to actual files to be included, the repo has a simple [Vagrantfile](http://vagrantup.com) that imports a base distro and then:
 
-* The first step is thus that all the content of homedir/ is rsync:ed over as-is. 
+* All the content of homedir/ is rsync:ed over as-is to the home directory in the VM.
+Extending or configuring the SDE is therefore sometimes just a matter of adding files under homedir/ in exactly the relative location where they should end up.  *Send pull requests!*
+(A possible alternative in the future is to just keep all homedir content in another git repo and just git clone that to the home dir.)
 
-NOTE: Extending or configuring the SDE is thereby often simply a matter of adding and editing files under homedir/ exactly in the relative location where they should end up.  *Send pull requests!*
-
-(A possible future alternative is to just keep all the content in another git repo and just git clone that to the home dir.)
-
-- In the final step script.sh is run inside the VM for steps that need to execute such as apt-get installs and any other scripted steps.
+- In the final step, script.sh is run inside the VM for those steps that need to execute such as apt-get installs and any other scripted steps.
 
