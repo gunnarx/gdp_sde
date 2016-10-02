@@ -8,5 +8,5 @@ format2="%Y-%m-%d %H:%M:%S"
 date=$(date +"$format1#$format2")
 
 echo "$date" | sed 's/#.*//' >FILESTAMP
-echo "$date" | sed 's/#.*//' >TIMESTAMP
+echo "$date" | sed 's/.*#//' >TIMESTAMP
 
