@@ -1,4 +1,5 @@
 #!/bin/sh
+sudo mkdir -p /selftest
 sudo mount -t vboxsf /selftest /selftest
 entrypoint=/selftest/run.sh
 font=Monospace
