@@ -1,5 +1,7 @@
 [Desktop Entry]
-Name=LXTerminal
+Encoding=UTF-8
+Type=Application
+Name=Terminal
 Icon=/usr/share/pixmaps/lxterminal.xpm
 Exec=/usr/bin/lxterminal
 #longtitle="LXDE terminal emulator"\
