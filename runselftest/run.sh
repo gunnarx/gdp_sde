@@ -64,6 +64,14 @@ fi
 #set -e  # Fail if failure...
 #[ -n "$id" ]
 
+recordingoff() {
+   if [ "$OLD_VIRTUALBOX" = 1 ] ; then
+      VBoxManage modifyvm $id --vcpenabled off
+   else
+      VBoxManage modifyvm $id --videocap off
+   fi
+}
+
 if [ -n "$RECORD" ] ; then 
    if [ "$OLD_VIRTUALBOX" = 1 ] ; then
       VBoxManage modifyvm $id --vcpenabled on
@@ -82,11 +90,7 @@ if [ -n "$RECORD" ] ; then
       VBoxManage modifyvm $id --videocapfile "$(dirname $vmfile)/selftest.webm"
    fi
 else
-   if [ "$OLD_VIRTUALBOX" = 1 ] ; then
-      VBoxManage modifyvm $id --vcpenabled off
-   else
-      VBoxManage modifyvm $id --videocap off
-   fi
+  recordingoff
 fi
 
 # Defaults are OK for these
@@ -115,3 +119,4 @@ if [ -n "$RECORD" ] ; then
    VBoxManage controlvm $id poweroff 2>/dev/null || true
 fi
 
+recordingoff
