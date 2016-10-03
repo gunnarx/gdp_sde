@@ -19,6 +19,9 @@ PATTERN="gdp-sdk"
 # Self test dir, relative to this file
 SELFTESTDIR=../selftest
 
+# Name of recording
+WEBM_NAME="recording_${1}.webm"
+
 # Geometry of the video
 W=1920
 H=1080
@@ -68,7 +71,7 @@ if [ -n "$RECORD" ] ; then
       VBoxManage modifyvm $id --vcpheight $H
       VBoxManage modifyvm $id --vcprate 512
       VBoxManage modifyvm $id --vcpfps 25
-      VBoxManage modifyvm $id --vcpfile "$(dirname $vmfile)/selftest.webm"
+      VBoxManage modifyvm $id --vcpfile "$(dirname $vmfile)/$WEBM_NAME"
    else
       VBoxManage modifyvm $id --videocap on
       VBoxManage modifyvm $id --videocapres $RESOLUTION
