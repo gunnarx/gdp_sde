@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 # (C) 2016 Gunnar Andersson
 # License: MPLv2
 
@@ -40,6 +40,7 @@ echo $0 | fgrep -q record.sh && RECORD=yes
 
 D=$(dirname "$0") ; cd "$D"
 D="$PWD"
+cd -
 
 # VirtualBox requires absolute path to stuff..
 vmfile=$(readlink -f "$1")
