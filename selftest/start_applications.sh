@@ -14,6 +14,6 @@ done
   echo "...and 5 more"
 sleep 5
 echo Killing all applications
-sudo killall d-feet dlt_viewer qtcreator eclipse java
+sudo killall d-feet dlt_viewer qtcreator eclipse java lxterminal
 sleep 2
 cd "$cwd"
