@@ -8,10 +8,10 @@ fi
 
 # Remember to run script in the right directory...
 file=wallpaper.png
-textsize=40
+textsize=32
 text="$1"
 color="#3C5256FF"
 tempfile=wallpaper_new.$$.png
 
-$convert $file -gravity NorthEast  -pointsize $textsize -undercolor "#00000080" -fill $color -annotate +6+6 "$text" $tempfile
+$convert $file -gravity NorthEast  -pointsize $textsize -undercolor "#00000080" -fill $color -annotate +0+6 "$text" $tempfile
 mv $tempfile $file
