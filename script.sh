@@ -56,6 +56,14 @@ cd ~$USER
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
 cd -
 
+# Insert Qt settings files
+cp ~/.config/targets/common/* ~/.config/QtProject/qtcreator/
+if [ -n "$MACHINE" ] ; then
+   cp ~/.config/targets/$MACHINE/* ~/.config/QtProject/qtcreator/
+else
+   echo "*** WARNING, \$MACHINE was not set - can't copy the right Qt Creator files"
+fi
+
 # Reset ownership
 chown -R $USER:$USER /home/$USER
 
