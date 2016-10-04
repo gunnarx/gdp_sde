@@ -37,13 +37,16 @@ apt-get remove -y dictionaries-common miscfiles
 wget https://raw.githubusercontent.com/gunnarx/gocd-setup/master/install_common_build_dependencies.sh
 . ./install_common_build_dependencies.sh
 
+# Install Qt-QtCreator
+./install_qtcreator.sh
+
 # There's some bug currently with x flags disappearing from the filesystem
 # somewhere along the build pipeline (files unpacked on a noexec filesystem?)
 # Hmm, the bug should be gone now for yocto-sdk, but I'm not sure about Qt install, etc
 # Better safe than sorry for now...
 chmod 755 $HOMEDIR/gdp-sdk $HOMEDIR/gdp-sdk/eclipse $HOMEDIR/gdp-sdk/eclipse/eclipse
 chmod 755 $HOMEDIR/dlt-viewer/dlt_viewer
-chmod -R 755 $HOMEDIR/Qt-5.6/5.6/gcc_64/bin $HOMEDIR/Qt-5.6/Tools/QtCreator/bin
+# chmod -R 755 $HOMEDIR/Qt-5.6/5.6/gcc_64/bin $HOMEDIR/Qt-5.6/Tools/QtCreator/bin
 chmod -R 755 $HOMEDIR/gdp-sdk/bin
 
 # Unpack SDK
