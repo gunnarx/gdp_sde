@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QtCreatorProfiles>
+<!-- Written by QtCreator 4.0.1, 2016-10-04T18:07:40. -->
+<qtcreator>
+ <data>
+  <variable>Profile.0</variable>
+  <valuemap type="QVariantMap">
+   <value type="bool" key="PE.Profile.AutoDetected">true</value>
+   <value type="QString" key="PE.Profile.AutoDetectionSource"></value>
+   <valuemap type="QVariantMap" key="PE.Profile.Data">
+    <value type="QString" key="Android.GdbServer.Information"></value>
+    <valuelist type="QVariantList" key="CMake.ConfigurationKitInformation">
+     <value type="QString">QT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}</value>
+     <value type="QString">CMAKE_CXX_COMPILER:STRING=%{Compiler:Executable}</value>
+    </valuelist>
+    <value type="QString" key="CMake.GeneratorKitInformation">CodeBlocks - Unix Makefiles</value>
+    <value type="QString" key="CMakeProjectManager.CMakeKitInformation">{685f81de-ab8c-46cd-82a5-7374e23dfbda}</value>
+    <value type="QString" key="PE.Profile.Device">Desktop Device</value>
+    <value type="QString" key="PE.Profile.DeviceType">Desktop</value>
+    <valuelist type="QVariantList" key="PE.Profile.Environment"/>
+    <value type="QString" key="PE.Profile.SysRoot"></value>
+    <value type="QString" key="PE.Profile.ToolChain">{935ecf89-1651-4acf-8f26-5d8a8791ba6a}</value>
+    <value type="QString" key="QtPM4.mkSpecInformation"></value>
+    <value type="QString" key="QtSupport.QtInformation">SDK.qt.56.gcc_64</value>
+   </valuemap>
+   <value type="QString" key="PE.Profile.Icon">:///DESKTOP///</value>
+   <value type="QString" key="PE.Profile.Id">qt.56.gcc_64_kit</value>
+   <valuelist type="QVariantList" key="PE.Profile.MutableInfo"/>
+   <value type="QString" key="PE.Profile.Name">Desktop Qt %{Qt:Version} GCC 64bit</value>
+   <value type="bool" key="PE.Profile.SDK">true</value>
+   <valuelist type="QVariantList" key="PE.Profile.StickyInfo">
+    <value type="QString">PE.Profile.ToolChain</value>
+    <value type="QString">PE.Profile.DeviceType</value>
+    <value type="QString">QtSupport.QtInformation</value>
+   </valuelist>
+  </valuemap>
+ </data>
+ <data>
+  <variable>Profile.1</variable>
+  <valuemap type="QVariantMap">
+   <value type="bool" key="PE.Profile.AutoDetected">false</value>
+   <value type="QString" key="PE.Profile.AutoDetectionSource"></value>
+   <valuemap type="QVariantMap" key="PE.Profile.Data">
+    <value type="QString" key="Android.GdbServer.Information"></value>
+    <valuelist type="QVariantList" key="CMake.ConfigurationKitInformation">
+     <value type="QString">QT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}</value>
+     <value type="QString">CMAKE_CXX_COMPILER:STRING=%{Compiler:Executable}</value>
+    </valuelist>
+    <value type="QString" key="CMake.GeneratorKitInformation">CodeBlocks - Unix Makefiles</value>
+    <value type="QString" key="CMakeProjectManager.CMakeKitInformation">{685f81de-ab8c-46cd-82a5-7374e23dfbda}</value>
+    <value type="QString" key="Debugger.Information">{fe399dc1-62a8-4647-b6ef-dcaaae0c5124}</value>
+    <value type="QString" key="PE.Profile.Device">{c4c5df5b-2b3a-4ce8-b052-24fe6d26a1d7}</value>
+    <value type="QString" key="PE.Profile.DeviceType">GenericLinuxOsType</value>
+    <valuelist type="QVariantList" key="PE.Profile.Environment"/>
+    <value type="QString" key="PE.Profile.SysRoot"></value>
+    <value type="QString" key="PE.Profile.ToolChain">{e309688c-a4ad-4a5f-a834-ba4547273d08}</value>
+    <value type="QString" key="QtPM4.mkSpecInformation"></value>
+    <value type="int" key="QtSupport.QtInformation">5</value>
+   </valuemap>
+   <value type="QString" key="PE.Profile.Icon">:///DESKTOP///</value>
+   <value type="QString" key="PE.Profile.Id">{afcc504d-13de-40cc-878c-b831322ef499}</value>
+   <valuelist type="QVariantList" key="PE.Profile.MutableInfo"/>
+   <value type="QString" key="PE.Profile.Name">GDP-SDK for Raspberry Pi 2/3</value>
+   <value type="bool" key="PE.Profile.SDK">false</value>
+   <valuelist type="QVariantList" key="PE.Profile.StickyInfo"/>
+  </valuemap>
+ </data>
+ <data>
+  <variable>Profile.Count</variable>
+  <value type="int">2</value>
+ </data>
+ <data>
+  <variable>Profile.Default</variable>
+  <value type="QString">qt.56.gcc_64_kit</value>
+ </data>
+ <data>
+  <variable>Version</variable>
+  <value type="int">1</value>
+ </data>
+</qtcreator>
