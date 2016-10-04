@@ -52,9 +52,12 @@ chmod 755 ./gdp-sdk/oecore*toolchain*.sh
 rm ./gdp-sdk/oecore*toolchain*.sh
 
 # Prompt
-cd ~/
+cd ~$USER
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
 cd -
+
+# Reset ownership
+chown -R $USER:$USER /home/$USER
 
 # Skip login screen
 echo -e "[base]\nautologin=$USER" >> /etc/lxdm/default.conf
