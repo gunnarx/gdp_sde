@@ -8,7 +8,7 @@ fi
 
 # Remember to run script in the right directory...
 file=wallpaper.png
-textsize=32
+textsize=40
 text="$1"
 color="#3C5256FF"
 tempfile=wallpaper_new.$$.png
