@@ -55,20 +55,20 @@ chmod 755 ./gdp-sdk/oecore*toolchain*.sh
 rm ./gdp-sdk/oecore*toolchain*.sh
 
 # Prompt
-cd ~$USER
+cd $HOMEDIR
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
 cd -
 
 # Insert Qt settings files
-cp ~$USER/.config/targets/common/* ~$USER/.config/QtProject/qtcreator/
+cp $HOMEDIR/.config/targets/common/* $HOMEDIR/.config/QtProject/qtcreator/
 if [ -n "$MACHINE" ] ; then
-   cp ~$USER/.config/targets/$MACHINE/* ~$USER/.config/QtProject/qtcreator/
+   cp $HOMEDIR/.config/targets/$MACHINE/* $HOMEDIR/.config/QtProject/qtcreator/
 else
    echo "*** WARNING, \$MACHINE was not set - can't copy the right Qt Creator files"
 fi
 
 # Reset ownership
-chown -R $USER:$USER /home/$USER
+chown -R $USER:$USER $HOMEDIR
 
 # Skip login screen
 echo -e "[base]\nautologin=$USER" >> /etc/lxdm/default.conf
