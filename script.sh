@@ -84,6 +84,10 @@ else
    echo "*** WARNING, failed to find mkspecs dir"
 fi
 
+# Create a known name entrypoint for environment script (used by desktop icon)
+cd $HOMEDIR/gdp-sdk/yocto-sdk
+ln -s */environment* setupenv
+
 # Reset ownership
 chown -R $USER:$USER $HOMEDIR
 

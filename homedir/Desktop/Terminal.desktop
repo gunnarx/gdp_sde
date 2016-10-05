@@ -1,8 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
 Type=Application
-Name=Terminal
+Name=Terminal (cross env)
 Icon=/usr/share/pixmaps/lxterminal.xpm
-Exec=/usr/bin/lxterminal
-#longtitle="LXDE terminal emulator"\
-#description="LXTerminal is a VTE-based terminal emulator for the Lightweight X11 Desktop Environment (LXDE). It supports multiple tabs and has only minimal dependencies thus being completely desktop-independent. In order to reduce memory usage and increase the performance, all instances of the terminal are sharing a single process."\
+Exec=/usr/bin/lxterminal -e "bash --init-file ~/gdp-sdk/yocto-sdk/setupenv"
