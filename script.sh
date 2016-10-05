@@ -60,6 +60,11 @@ git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --d
 cd -
 
 # Insert Qt settings files
+if [ -z "$MACHINE" ] ; then
+  cd $HOMEDIR/gdp-sdk/yocto-sdk
+  MACHINE="$(ls)"
+fi
+
 cp $HOMEDIR/.config/targets/common/* $HOMEDIR/.config/QtProject/qtcreator/
 if [ -n "$MACHINE" ] ; then
    cp $HOMEDIR/.config/targets/$MACHINE/* $HOMEDIR/.config/QtProject/qtcreator/
