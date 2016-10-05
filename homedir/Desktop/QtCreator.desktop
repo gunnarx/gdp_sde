@@ -3,5 +3,5 @@ Encoding=UTF-8
 Type=Application
 Name=Qt Creator
 Icon=QtProject-qtcreator.png
-Exec=/home/vagrant/Qt-5.6/Tools/QtCreator/bin/qtcreator
+Exec=/home/vagrant/bin/qtcreator-environment-wrapper.sh
 
