@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorDebuggers>
-<!-- Written by QtCreator 4.0.1, 2016-10-04T18:07:40. -->
+<!-- Written by QtCreator 4.0.1, 2016-10-05T08:05:43. -->
 <qtcreator>
  <data>
   <variable>DebuggerItem.0</variable>
@@ -13,7 +13,7 @@
    <value type="QString" key="Binary">/home/vagrant/gdp-sdk/yocto-sdk/raspberrypi2/sysroots/x86_64-oesdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gdb</value>
    <value type="QString" key="DisplayName">arm-poky-linux-gnueabi-gdb</value>
    <value type="int" key="EngineType">1</value>
-   <value type="QString" key="Id">{fe399dc1-62a8-4647-b6ef-dcaaae0c5124}</value>
+   <value type="QString" key="Id">{e25a9264-fa73-4210-87ed-e7ac91470e1b}</value>
    <value type="QDateTime" key="LastModified"></value>
    <value type="QString" key="Version">7.10.1</value>
   </valuemap>

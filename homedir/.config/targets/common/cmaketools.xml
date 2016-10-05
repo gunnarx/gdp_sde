@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorCMakeTools>
-<!-- Written by QtCreator 4.0.1, 2016-10-04T18:07:40. -->
+<!-- Written by QtCreator 4.0.1, 2016-10-05T08:05:43. -->
 <qtcreator>
  <data>
   <variable>CMakeTools.0</variable>
@@ -8,7 +8,7 @@
    <value type="bool" key="AutoDetected">true</value>
    <value type="QString" key="Binary">/usr/bin/cmake</value>
    <value type="QString" key="DisplayName">System CMake at /usr/bin/cmake</value>
-   <value type="QString" key="Id">{685f81de-ab8c-46cd-82a5-7374e23dfbda}</value>
+   <value type="QString" key="Id">{7659e3df-62f6-4423-8084-1425a65e916c}</value>
   </valuemap>
  </data>
  <data>
@@ -17,7 +17,7 @@
  </data>
  <data>
   <variable>CMakeTools.Default</variable>
-  <value type="QString">{685f81de-ab8c-46cd-82a5-7374e23dfbda}</value>
+  <value type="QString">{7659e3df-62f6-4423-8084-1425a65e916c}</value>
  </data>
  <data>
   <variable>Version</variable>

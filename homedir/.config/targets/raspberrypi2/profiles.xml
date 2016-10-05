@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProfiles>
-<!-- Written by QtCreator 4.0.1, 2016-10-04T18:07:40. -->
+<!-- Written by QtCreator 4.0.1, 2016-10-05T08:05:43. -->
 <qtcreator>
  <data>
   <variable>Profile.0</variable>
@@ -14,12 +14,12 @@
      <value type="QString">CMAKE_CXX_COMPILER:STRING=%{Compiler:Executable}</value>
     </valuelist>
     <value type="QString" key="CMake.GeneratorKitInformation">CodeBlocks - Unix Makefiles</value>
-    <value type="QString" key="CMakeProjectManager.CMakeKitInformation">{685f81de-ab8c-46cd-82a5-7374e23dfbda}</value>
+    <value type="QString" key="CMakeProjectManager.CMakeKitInformation">{7659e3df-62f6-4423-8084-1425a65e916c}</value>
     <value type="QString" key="PE.Profile.Device">Desktop Device</value>
     <value type="QString" key="PE.Profile.DeviceType">Desktop</value>
     <valuelist type="QVariantList" key="PE.Profile.Environment"/>
     <value type="QString" key="PE.Profile.SysRoot"></value>
-    <value type="QString" key="PE.Profile.ToolChain">{935ecf89-1651-4acf-8f26-5d8a8791ba6a}</value>
+    <value type="QString" key="PE.Profile.ToolChain">{2b4435be-8160-40ca-9785-9e14b6063eb3}</value>
     <value type="QString" key="QtPM4.mkSpecInformation"></value>
     <value type="QString" key="QtSupport.QtInformation">SDK.qt.56.gcc_64</value>
    </valuemap>
@@ -29,9 +29,9 @@
    <value type="QString" key="PE.Profile.Name">Desktop Qt %{Qt:Version} GCC 64bit</value>
    <value type="bool" key="PE.Profile.SDK">true</value>
    <valuelist type="QVariantList" key="PE.Profile.StickyInfo">
-    <value type="QString">PE.Profile.ToolChain</value>
-    <value type="QString">PE.Profile.DeviceType</value>
     <value type="QString">QtSupport.QtInformation</value>
+    <value type="QString">PE.Profile.DeviceType</value>
+    <value type="QString">PE.Profile.ToolChain</value>
    </valuelist>
   </valuemap>
  </data>
@@ -47,20 +47,20 @@
      <value type="QString">CMAKE_CXX_COMPILER:STRING=%{Compiler:Executable}</value>
     </valuelist>
     <value type="QString" key="CMake.GeneratorKitInformation">CodeBlocks - Unix Makefiles</value>
-    <value type="QString" key="CMakeProjectManager.CMakeKitInformation">{685f81de-ab8c-46cd-82a5-7374e23dfbda}</value>
-    <value type="QString" key="Debugger.Information">{fe399dc1-62a8-4647-b6ef-dcaaae0c5124}</value>
-    <value type="QString" key="PE.Profile.Device">{c4c5df5b-2b3a-4ce8-b052-24fe6d26a1d7}</value>
+    <value type="QString" key="CMakeProjectManager.CMakeKitInformation">{7659e3df-62f6-4423-8084-1425a65e916c}</value>
+    <value type="QString" key="Debugger.Information">{e25a9264-fa73-4210-87ed-e7ac91470e1b}</value>
+    <value type="QString" key="PE.Profile.Device">{2889d151-c4d9-4a48-a888-c262df722ec1}</value>
     <value type="QString" key="PE.Profile.DeviceType">GenericLinuxOsType</value>
     <valuelist type="QVariantList" key="PE.Profile.Environment"/>
     <value type="QString" key="PE.Profile.SysRoot"></value>
-    <value type="QString" key="PE.Profile.ToolChain">{e309688c-a4ad-4a5f-a834-ba4547273d08}</value>
+    <value type="QString" key="PE.Profile.ToolChain">{b57633bc-e2d6-42b2-a576-a486cd9ef6c2}</value>
     <value type="QString" key="QtPM4.mkSpecInformation"></value>
-    <value type="int" key="QtSupport.QtInformation">5</value>
+    <value type="int" key="QtSupport.QtInformation">2</value>
    </valuemap>
    <value type="QString" key="PE.Profile.Icon">:///DESKTOP///</value>
-   <value type="QString" key="PE.Profile.Id">{afcc504d-13de-40cc-878c-b831322ef499}</value>
+   <value type="QString" key="PE.Profile.Id">{193b32a9-8e22-40b9-902a-ea07a2524a9e}</value>
    <valuelist type="QVariantList" key="PE.Profile.MutableInfo"/>
-   <value type="QString" key="PE.Profile.Name">GDP-SDK for Raspberry Pi 2/3</value>
+   <value type="QString" key="PE.Profile.Name">GDP-SDK for RaspberryPi 2/3</value>
    <value type="bool" key="PE.Profile.SDK">false</value>
    <valuelist type="QVariantList" key="PE.Profile.StickyInfo"/>
   </valuemap>
