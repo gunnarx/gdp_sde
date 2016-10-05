@@ -60,9 +60,9 @@ git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --d
 cd -
 
 # Insert Qt settings files
-cp ~/.config/targets/common/* ~/.config/QtProject/qtcreator/
+cp ~$USER/.config/targets/common/* ~$USER/.config/QtProject/qtcreator/
 if [ -n "$MACHINE" ] ; then
-   cp ~/.config/targets/$MACHINE/* ~/.config/QtProject/qtcreator/
+   cp ~$USER/.config/targets/$MACHINE/* ~$USER/.config/QtProject/qtcreator/
 else
    echo "*** WARNING, \$MACHINE was not set - can't copy the right Qt Creator files"
 fi
