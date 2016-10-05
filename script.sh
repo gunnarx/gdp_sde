@@ -34,8 +34,11 @@ apt-get remove -y dictionaries-common miscfiles
 
 # And some other commonly used packages in other GENIVI software
 # Let's be lazy and reuse the file we already have for Go Agent setup (again, I would say some repetition here)
+# Then move it out of the way but keep it for documentation purposes
 wget https://raw.githubusercontent.com/gunnarx/gocd-setup/master/install_common_build_dependencies.sh
 . ./install_common_build_dependencies.sh
+mkdir -p bin
+mv install_common_build_dependencies.sh bin/
 
 # There's some bug currently with x flags disappearing from the filesystem
 # somewhere along the build pipeline (files unpacked on a noexec filesystem?)
