@@ -67,6 +67,23 @@ else
    echo "*** WARNING, \$MACHINE was not set - can't copy the right Qt Creator files"
 fi
 
+# Work around some Qt / meta-qt5 bug that causes qmake to complain like this:
+#" Cannot read .../mkspecs/oe-device-extra.pri: No such file or directory
+
+# ... I went to rerport the bug upstream but github/meta-qt5 has disabled
+# Issues, and the  README didn't say where to log bugs
+
+# Let's put a dummy file there... but we'll use append so if a valid file is
+# later on included, this won't overwrite it.
+mkspecdir=$(readlink -f $HOMEDIR/gdp-sdk/yocto-sdk/*/sysroots/*/usr/lib/qt5/mkspecs)
+
+if [ -n "$mkspecdir" ] ; then
+   echo "# Bug workaround - this file/line is here because this file is included by mkspec linux-oe-g++ but there was no such file..." \
+     >>$mkspecdir/oe-device-extra.pri
+else
+   echo "*** WARNING, failed to find mkspecs dir"
+fi
+
 # Reset ownership
 chown -R $USER:$USER $HOMEDIR
 
