@@ -1,6 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
 Type=Application
-Name=Terminal (cross env)
+Name=Terminal
 Icon=/usr/share/pixmaps/lxterminal.xpm
-Exec=/usr/bin/lxterminal -e "bash --init-file ~/gdp-sdk/yocto-sdk/setupenv"
+Exec=/usr/bin/lxterminal -e /bin/bash

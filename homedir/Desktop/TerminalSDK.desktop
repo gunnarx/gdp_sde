@@ -1,0 +1,6 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=Terminal (SDK env)
+Icon=/usr/share/pixmaps/lxterminal.xpm
+Exec=/usr/bin/lxterminal -t "SDK Terminal" -e /home/vagrant/.bash_start_with_env
