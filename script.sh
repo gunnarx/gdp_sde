@@ -106,7 +106,25 @@ apt-get autoremove
 # Clear apt caches
 apt-get autoclean
 apt-get clean
+
+# Collect corresponding source code
+
+rm -f failed_fetch
+if [ ! -d "/vagrant" ] ; then
+  echo "FATAL - /vagrant not mounted?"
+else
+  mkdir /vagrant/source
+  cd /vagrant/source
+  dpkg --get-selections | grep -v deinstall | awk '{print $1}' | \
+    while read f ; do
+        apt-get source $f || echo $f >failed_fetch
+    done
+fi
+
+if [ -f "failed_fetch" ] ; then
+  echo "WARNING - some sources were not fetched:"
+  cat failed_fetch
+fi
+
+# Final cleanup
 rm -rf /tmp/* /var/{cache,tmp}/* /var/lib/apt/lists/*
-
-
-
