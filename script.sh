@@ -100,7 +100,7 @@ chown -R $USER:$USER $HOMEDIR
 echo -e "[base]\nautologin=$USER" >> /etc/lxdm/default.conf
 
 # Some unnecessary packages...
-apt-get remove -y juju --auto-remove
+apt-get remove -y lxmusic juju --auto-remove
 apt-get autoremove
 
 # Clear apt caches
