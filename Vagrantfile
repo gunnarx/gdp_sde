@@ -43,7 +43,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.gui = false
 
       vb.customize [ "modifyvm", :id, "--name", vmname ]
-      vb.customize [ "modifyvm", :id, "--memory", "2048" ]
+      vb.customize [ "modifyvm", :id, "--memory", "4096" ]
       vb.customize [ "modifyvm", :id, "--vram", "128" ]
       vb.customize [ "modifyvm", :id, "--clipboard" , "bidirectional" ]
       vb.cpus = 2
