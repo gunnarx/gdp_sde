@@ -1,4 +1,5 @@
-export PATH="$PATH:~/bin:~/gdp_sdk/bin"
+export PATH="$PATH:~/bin:~/gdp_sdk/bin:~/gdp_sdk/bin/capicxx/bin:~/gdp_sdk/bin/capicxx-someip/bin:~/gdp_sdk/bin/capicxx-dbus/bin:"
+
 alias ll='ls -alF'
 
 # Set up yocto SDK environment
