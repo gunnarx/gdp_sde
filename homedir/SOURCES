@@ -1,0 +1,112 @@
+GENIVI Development Platform (GDP)
+Software Development Environment (SDE) - VirtualBox image.
+
+Licenses, source code, and recreating the image from scratch
+=============================================================
+
+A downloadable VM image is provided for your convenience. It is built 
+based on a standard Ubuntu 14.04 system.  (The Vagrant base box for
+16.04 has an inconvenient bug - bug we might upgrade soon).
+
+All the source code making up this system is provided, both for all
+software whose license requires it, and for many that do not.
+
+First, a collection of source code matching all installed software packages
+in this particular Ubuntu system should be found where you downloaded the
+image*. This contains source code for the installed packages that are part
+of Ubuntu.  Programs that are not part of standard Ubuntu are not included
+in that package - instructions for them follow below.
+
+*HOWEVER: We really would not recommend downloading the aforementioned
+Ubuntu source package since there are much more convenient ways to acquire
+the source code and required build environment of a fully open-source
+system like Debian/Ubuntu:  
+
+Instead, it is likely more convenient for you to use the following command
+run in a terminal from inside of this system:
+
+$ sudo apt-get build-dep $package   # (for build deps)
+$ sudo apt-get source $package
+
+for each program you are interested in.
+
+To list all installed packages you may try:
+$ dpkg --get-selections
+
+To reference software copyright information and original location of source
+code and documentation for using and building, you could start with this
+file:
+
+ftp://ftp.ubuntu.com/ubuntu/dists/trusty/main/source/Sources.bz2
+
+...or the same file on any official Ubuntu mirror.
+
+We also offer a way to reproduce the building of this system as a whole.
+All necessary source and binary code references, and all build instructions
+to recreate the system is available for you by starting with the "SDE"
+pipeline instructions on https://go.genivi.org and the repository:
+https://github.com/genivi/gdp_sde.git
+
+(In order to view/edit the steps in the go.genivi.org system you may need
+ to request a personal account.)
+
+If any of the given URLs end up being broken, we recommend you check the
+GENIVI public Wiki: (currently https://projects.genivi.org), where you
+ought to find up to date information somewhere under the GDP project, as
+well as mailing lists that can be used to reach developers.
+
+Here follows information about the software that has been added in
+addition to standard Ubuntu packages:
+
+1. The source code for Qt is provided inside the Src directory of the
+installation, which contains that which the standard online installer from
+the Qt Company installs when source code is requested.
+
+Qt is also available with a commercial license.  The version we are
+providing here is offered using GPL and other open-source licenses.  
+Please refer to the source code headers for details.
+
+2. The Eclipse installation is based on a standard Eclipse Luna with DSL
+environment, as offered from download.eclipse.org, licensed with the
+Eclipse Public License.  Luna is used because of compatibility with 
+Franca in the particular version that is also compatible with CommonAPI C++
+(refer to Franca IDL project on GitHub for more information - see
+below)
+
+Although it is frankly a little difficult to get clear information on
+corresponding source code for a particular binary download from the Eclipse
+project itself, we can provide the following information:
+
+To recreate this setup you can download a binary distribution (DSL version)
+and then install the packages for Franca and CommonAPI tooling.
+The following project could help to automate that activity:
+https://github.com/GENIVI/eclipse_install_automation.git
+
+...or you can build from source. Source code for Eclipse environment is
+provided by the help of the Eclipse project. To build Eclipse platform you
+can fetch the main project from:
+git://git.eclipse.org/gitroot/platform/eclipse.platform.releng.aggregator.git
+Building that project will fetch relevant source code. The tag used for
+Luna release is R4_4_2.
+
+4. Source code for the Franca IDL tooling is available from
+https://github.com/franca/franca
+
+5. Source code for CommonAPI C++ related tooling is available from:
+https://github.com/GENIVI/common-api-tools.git
+   or (name change) https://github.com/GENIVI/capicxx-tools.git
+https://github.com/GENIVI/common-api-someip-tools.git
+   or (name change) https://github.com/GENIVI/capicxx-someip-tools.git
+https://github.com/GENIVI/common-api-dbus-tools.git
+   or (name change) https://github.com/GENIVI/capicxx-dbus-tools.git
+
+and build instructions are provided as part of the README inside of each
+project.
+
+6. Source code for DLT-Viewer is available from
+https://github.com/GENIVI/dlt-viewer.git
+
+License information should be given in each install directory.  If it
+isn't, please refer to the LICENSE or COPYING file that will be in each
+source code repository specified above.
+

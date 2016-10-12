@@ -49,28 +49,10 @@ chmod 755 $HOMEDIR/dlt-viewer/dlt_viewer
 chmod -R 755 $HOMEDIR/Qt-5.6/5.6/gcc_64/bin $HOMEDIR/Qt-5.6/Tools/QtCreator/bin
 chmod -R 755 $HOMEDIR/gdp-sdk/bin
 
-# Unpack SDK
-chmod 755 ./gdp-sdk/oecore*toolchain*.sh
-./gdp-sdk/oecore*toolchain*.sh -d ./gdp-sdk/yocto-sdk/* -y
-rm ./gdp-sdk/oecore*toolchain*.sh
-
 # Prompt
 cd $HOMEDIR
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
 cd -
-
-# Insert Qt settings files
-if [ -z "$MACHINE" ] ; then
-  cd $HOMEDIR/gdp-sdk/yocto-sdk
-  MACHINE="$(ls)"
-fi
-
-cp $HOMEDIR/.config/targets/common/* $HOMEDIR/.config/QtProject/qtcreator/
-if [ -n "$MACHINE" ] ; then
-   cp $HOMEDIR/.config/targets/$MACHINE/* $HOMEDIR/.config/QtProject/qtcreator/
-else
-   echo "*** WARNING, \$MACHINE was not set - can't copy the right Qt Creator files"
-fi
 
 # Work around some Qt / meta-qt5 bug that causes qmake to complain like this:
 #" Cannot read .../mkspecs/oe-device-extra.pri: No such file or directory
@@ -88,10 +70,6 @@ if [ -n "$mkspecdir" ] ; then
 else
    echo "*** WARNING, failed to find mkspecs dir"
 fi
-
-# Create a known name entrypoint for environment script (used by desktop icon)
-cd $HOMEDIR/gdp-sdk/yocto-sdk
-ln -s */environment* setupenv
 
 # Reset ownership
 chown -R $USER:$USER $HOMEDIR
