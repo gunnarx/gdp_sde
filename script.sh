@@ -11,6 +11,7 @@ apt-get install -y openjdk-7-jre
 apt-get install -y git wget unzip
 apt-get install -y d-feet
 apt-get install -y wmctrl # used by selftest
+apt-get install -y modemmanager # Support USB serial cables
 
 # For whatever reason, LXDM by default seems to list users like "syslog" in the
 # login screen.  Get rid of all that...
