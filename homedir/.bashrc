@@ -1,4 +1,4 @@
-export PATH="$PATH:~/bin:~/gdp-sdk/bin"
+export PATH="$PATH:~/bin:~/gdp-sdk/bin:$HOME/gdp-sdk/capicxx/bin:$HOME/gdp-sdk/capicxx-dbus/bin:$HOME/gdp-sdk/capicxx-someip/bin"
 
 alias ll='ls -alF'
 
