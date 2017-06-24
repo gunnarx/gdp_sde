@@ -47,7 +47,7 @@ mv install_common_build_dependencies.sh bin/
 # Better safe than sorry for now...
 chmod 755 $HOMEDIR/gdp-sdk $HOMEDIR/gdp-sdk/eclipse $HOMEDIR/gdp-sdk/eclipse/eclipse
 chmod 755 $HOMEDIR/dlt-viewer/dlt_viewer
-chmod -R 755 $HOMEDIR/Qt-5.6/5.6/gcc_64/bin $HOMEDIR/Qt-5.6/Tools/QtCreator/bin
+chmod -R 755 $HOMEDIR/Qt-5.6.1/5.6.1/gcc_64/bin $HOMEDIR/Qt-5.6/Tools/QtCreator/bin
 chmod -R 755 $HOMEDIR/gdp-sdk/bin
 
 # Unpack SDK
